@@ -609,7 +609,9 @@ footer {
   .Checkout-Confirm-Cash {
     min-height: 1405px;
   }
-
+  .mobile__header-links {
+    display: none;
+  }
   header {
     display: none;
   }
