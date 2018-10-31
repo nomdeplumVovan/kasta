@@ -1,0 +1,803 @@
+/* на всякий случай */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* на всякий случай */
+.Checkout-Confirm-Cash {
+  max-width: 1920px;
+  min-height: 1315px;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* контейнер шапка       */
+header {
+  background-color: #1d1f21;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+}
+
+.header__tablet {
+  display: none;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 780px;
+  height: 60px;
+  background-color: #1d1f21;
+}
+
+.header__tablet a:first-child {
+  justify-self: flex-start;
+  margin-left: -120px;
+}
+
+.header__tablet a:last-child {
+  justify-self: flex-end;
+  margin-right: -120px;
+}
+
+.logo {
+  width: 115px;
+  height: 34px;
+}
+
+header a {
+  text-decoration: none;
+  font-family: HelveticaBold;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4fb748;
+}
+
+header a img {
+  margin-left: 310px;
+  margin-right: 33px;
+}
+
+.header__link-delivery,
+.header__link-payment {
+  color: #72747e;
+}
+
+/* линия между шагами на диграммах*/
+.header__link-delivery:after,
+.header__link-payment:after {
+  content: " ";
+  position: relative;
+  background-image: url("./image/image001.png");
+  display: inline-block;
+  height: 2px;
+  width: 124px;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border: solid #1d1f21;
+  border-width: 0 10px;
+  margin-right: -100%;
+}
+
+
+/* контейнер шапка ----------------- конец */
+/* флекс для ориентации  грида по центру */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* грид - контейнер */
+.checkout__description {
+  display: grid;
+  grid-template-rows: 264px 304px 470px;
+  grid-template-columns: 444px 444px 380px;
+  grid-gap: 16px;
+  margin-top: 16px;
+}
+
+/* виды диаграмм для девайсов */
+.tablet__header-link-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.tablet__header-link-icons .material-icons.check_circle {
+  margin-right: 0;
+}
+
+.tablet__header-links {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.tablet__header-links a {
+  text-decoration: none;
+  font-family: HelveticaBold;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.5;
+  color: #000;
+}
+
+.tablet__header-links a:last-child,
+.mobile__header-links a:last-child {
+  opacity: 1;
+}
+
+.tablet__header-link-icons i::after {
+  content: " ";
+  position: relative;
+  background-image: url("./image/lineGreen.PNG");
+  display: inline-block;
+  height: 4px;
+  width: 188px;
+  text-align: center;
+  vertical-align: super;
+  margin-left: -10px;
+  margin-right: -1px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.mobile__header-links {
+  display: none;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mobile__header-links a {
+  text-decoration: none;
+  font-family: HelveticaBold;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  opacity: 0.3;
+  color: #000;
+}
+
+.delivery-payment-confirmation,
+.header__tablet {
+  display: none;
+}
+
+/* виды хедеров для девайсов ---------------конец*/
+
+/* кнопка из мобильной версии */
+.valide__purchase.mobile,
+.mobile__button {
+  display: none;
+}
+
+/* стилизация грид-контейнеров */
+.delivery,
+.payment,
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  padding-top: 24px;
+}
+
+/* из-за внутренних бордеров в грид контейнерах
+ пришлось переназначить паддинги */
+.delivery,
+.payment,
+.delivery__h1.border,
+.delivery__description.up__checkbox,
+.confirmation__checked.border,
+.change.border,
+.confirmation__quantity.checked,
+.confirmation .payment__card {
+  padding-left: 34px;
+}
+
+.payment {
+  padding-right: 34px;
+}
+
+.delivery {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+/* стилизация гридов -------------------- конец */
+/* контейнер Доставка               */
+.delivery__description.up__checkbox {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.up__checkbox {
+  margin-bottom: 21px;
+}
+
+.delivery__h1.goal {
+  margin-bottom: 0;
+}
+
+.delivery__h1 {
+  display: flex;
+  align-items: flex-start;
+  height: 24px;
+  font-family: HelveticaBold;
+  line-height: 1.33;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+/* иконка сдвиг        */
+.check_circle {
+  color: #4fb748;
+  margin-right: 10px;
+}
+
+/* ----------------------- */
+.delivery__description {
+  font-family: HelveticaRegular;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.delivery__data {
+  font-family: HelveticaLight;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #626f77;
+  margin-bottom: 15px;
+}
+
+.delivery__data.date {
+  text-align: right;
+  width: 200px;
+}
+
+.change {
+  font-family: HelveticaBold;
+  font-size: 14px;
+  color: #4c80ac;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.delivery__h1.border {
+  max-width: 346px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #dddddd;
+}
+
+/* контейнер Доставка --------------------------- конец */
+
+/* контейнер Оплата */
+.payment {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.payment__card-img {
+  margin-right: 16px;
+  margin-bottom: 15px;
+}
+
+.payment__card .delivery__data {
+  width: 281px;
+}
+
+.payment__card {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.payment a {
+  max-width: 372px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 53px;
+  border-bottom: 1px solid #e7e7ee;
+}
+
+span {
+  color: red;
+  font-family: HelveticaBold;
+}
+
+/*контейнер Оплата ----------------------------- конец  */
+
+/* контейнер Подтверждение */
+.confirmation {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.confirmation__checked,
+.confirmation__quantity {
+  display: flex;
+}
+
+/* инпут промокода */
+.confirmation__promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 40px;
+  margin-right: 32px;
+  margin-left: 34px;
+  border-radius: 4px;
+  border: solid 1px #dddddd;
+  background-color: #ffffff;
+  margin-bottom: 26px;
+}
+
+.confirmation__promo input {
+  border: none;
+  width: 148px;
+  height: 24px;
+  font-family: HelveticaMedium;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+  color: rgba(46, 47, 58, 0.48);
+  justify-self: flex-start;
+  padding-left: 16px;
+  outline: none;
+  cursor: pointer;
+}
+
+.confirmation__promo button {
+  height: 40px;
+  width: 109px;
+  border: none;
+  border-left: solid 1px #dddddd;
+  background-color: #ffffff;
+  font-family: HelveticaBold;
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+  color: #4c80ac;
+  justify-self: flex-end;
+  outline: none;
+  cursor: pointer;
+}
+
+/* стилизацияч чекбокса                  */
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+}
+
+.checkbox+label {
+  position: relative;
+  padding: 0 0 0 40px;
+  cursor: pointer;
+  background: url('./image/checkbox.PNG') no-repeat;
+
+}
+
+input[type=checkbox]:checked+label {
+  background: url('./image/checkbox-checked.PNG') no-repeat;
+  z-index: 2;
+}
+
+input[type=checkbox]:hover+label div,
+input[type=checkbox]:checked+label div {
+  width: 67px;
+  height: 20px;
+  color: #4fb748;
+  border-radius: 10px;
+  border: solid 1px #4fb748;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.checkbox:checked+label:after {
+  left: 26px;
+}
+
+label div {
+  width: 60px;
+  height: 20px;
+  text-align: right;
+  vertical-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+/*------------------------------------------------*/
+
+.confirmation__quantity {
+  justify-content: space-between;
+  margin-right: 18px;
+  padding-left: 34px;
+  padding-bottom: 8px;
+}
+
+.confirmation .payment__card .change.border {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e7e7ee;
+}
+
+.confirmation__checked.border {
+  height: 24px;
+  align-items: center;
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #dddddd;
+}
+
+.payment__card.border {
+  border-bottom: solid 1px #dddddd;
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+}
+
+/* Подтвердить заказ */
+.valide__purchase {
+  height: 48px;
+  margin: 0 32px;
+  font-family: HelveticaBold;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), inset 0 -2px 0 0 rgba(163, 0, 90, 0.32);
+  background-color: #f00085;
+}
+
+/* ------------------------------------------------------------ */
+.logo__card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 117px;
+  width: 316px;
+}
+
+.logo__card img {
+  padding-left: 40px;
+}
+
+/* контейнер Подтверждение --------------------------- конец */
+
+/* контейнер с покупками */
+
+.paper {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  padding-top: 7px;
+}
+
+.paper .delivery__data {
+  padding-bottom: 7px;
+  border-bottom: 1px solid #e7e7ee;
+  padding-left: 34px;
+  margin-bottom: 0px;
+}
+
+.paper__delivery {
+  display: flex;
+  flex-direction: row;
+}
+
+/* описания покупок */
+.paper__items {
+  display: flex;
+  flex-direction: column;
+  /* width: 457px; */
+}
+
+.paper__item {
+  display: flex;
+  flex-direction: row;
+  padding: 32px;
+}
+
+.paper__item:first-child {
+  border-bottom: 1px solid #e7e7ee;
+}
+
+.paper__item img {
+  width: 48px;
+  height: 70px;
+}
+
+/* условия покупок */
+.item__description {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  width: 316px;
+}
+
+.item__h2 {
+  font-family: HelveticaBold;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.item__price {
+  font-family: HelveticaMedium;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #000000;
+}
+
+.paper__items-description {
+  width: 449px;
+  border-left: 1px solid #e7e7ee;
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+}
+
+.delivery__description.with__icon {
+  display: flex;
+  align-items: center;
+}
+
+.material-icons.md-dark {
+  color: #4c80ac;
+}
+
+/* контейнер с покупками - конец*/
+
+/*ссылка  "вернуться в корзину "  */
+.change.return {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 24px;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 1300px;
+  background-color: #f3f3f3;
+}
+
+/* это ссылка на договор из футера */
+.offert {
+  width: 300px;
+  padding: 32px;
+  font-family: HelveticaLight;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #626f77;
+}
+
+@media screen and (max-device-width: 780px) {
+  .Checkout-Confirm-Cash {
+    min-height: 1405px;
+  }
+
+  header {
+    display: none;
+  }
+
+  .header__tablet {
+    display: flex;
+  }
+
+  main {
+    width: 780px;
+  }
+
+  .delivery-payment-confirmation {
+    width: 736px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+    background-color: #ffffff;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .paper {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .checkout__description {
+    display: grid;
+    grid-template-rows: 102px 264px 262px 553px 26px;
+    grid-template-columns: 360px 360px;
+  }
+
+  .payment {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .confirmation__grid {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .payment__card .delivery__data {
+    width: 224px;
+  }
+
+  /*  переориентация блока покупок */
+  .paper__items-description {
+    width: 345px;
+  }
+
+  .paper__delivery {
+    flex-direction: column;
+  }
+
+  .paper__item {
+    border-bottom: 1px solid #e7e7ee;
+  }
+
+  .paper__items-description .confirmation__quantity:last-child {
+    padding-bottom: 24px;
+  }
+
+  /* ---------------------------- */
+  footer {
+    width: 780px;
+    padding-top: 0px;
+  }
+}
+
+@media screen and (max-device-width: 320px) {
+
+  header,
+  .paper,
+  .tablet__header-links {
+    display: none;
+  }
+
+  .Checkout-Confirm-Cash {
+    width: 320px;
+    background-color: #f3f3f3;
+  }
+
+  main {
+    width: 320px;
+  }
+
+  footer {
+    width: 320px;
+  }
+
+  .header__tablet {
+    display: flex;
+    width: 320px;
+  }
+
+  .checkout__description {
+    display: grid;
+    grid-template-columns: 304px;
+    grid-template-rows: 60px 48px;
+    grid-gap: 7px;
+  }
+
+  .delivery-payment-confirmation {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 304px;
+    height: 61px;
+  }
+
+  .confirmation__grid {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .checkout__description {
+    margin-top: 0;
+  }
+
+  /*  игры с диаграммой состояния покупки */
+  .tablet__header-link-icons i::after {
+    width: 84px;
+    margin-left: -7px;
+    margin-right: -1px;
+  }
+
+  .tablet__header-link-icons i::after {
+    width: 85px;
+  }
+
+  .header__tablet a:first-child {
+    margin-left: 0px;
+  }
+
+  .material-icons.md-24 {
+    font-size: 24px;
+  }
+
+  .header__tablet a:last-child {
+    margin-right: 0px;
+  }
+
+  i+img {
+    width: 24px;
+  }
+
+  .mobile__header-links {
+    display: flex;
+  }
+
+  .tablet__header-link-icons {
+    margin-top: 6px;
+  }
+
+  /* --------------------------------------------- */
+  /* кнопка на мобильной версии */
+  .valide__purchase.mobile {
+    display: flex;
+  }
+
+  .mobile__button {
+    display: flex;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    margin: auto;
+  }
+
+  .mobile__button button {
+    display: block;
+    width: 288px;
+    margin: 0 8px;
+    padding-left: 70px;
+  }
+
+  /* ---------------------------------------- */
+  .confirmation__promo input {
+    width: 128px;
+    font-size: 14px;
+  }
+}

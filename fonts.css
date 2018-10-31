@@ -1,0 +1,41 @@
+/* Вроде бы шрифт у меня на компе есть, но мало ли, решил подключить */
+
+@font-face {
+  font-family: HelveticaBold;
+  src: url('./fonts/HelveticaBold/HelveticaBold.ttf'),
+    url('./fonts/HelveticaBold/HelveticaBold.eot'),
+    url('./fonts/HelveticaBold/HelveticaBold.woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: HelveticaHeavy;
+  src: url('./fonts/HelveticaHeavy/HelveticaHeavy.ttf'),
+    url('./fonts/HelveticaHeavy/HelveticaHeavy.eot'),
+    url('./fonts/HelveticaHeavy/HelveticaHeavy.woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: HelveticaLight;
+  src: url('./fonts/HelveticaLight/HelveticaLight.ttf'),
+    url('./fonts/HelveticaLight/HelveticaLight.eot'),
+    url('./fonts/HelveticaLight/HelveticaLight.woff');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: HelveticaMedium;
+  src: url('./fonts/HelveticaMedium/HelveticaMedium.ttf'),
+    url('./fonts/HelveticaMedium/HelveticaMedium.eot'),
+    url('./fonts/HelveticaMedium/HelveticaMedium.woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: HelveticaRegular;
+  src: url('./fonts/HelveticaRegular/HelveticaRegular.ttf'),
+    url('./fonts/HelveticaRegular/HelveticaRegular.eot'),
+    url('./fonts/HelveticaRegular/HelveticaRegular.woff');
+  font-weight: 400;
+}
