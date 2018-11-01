@@ -688,7 +688,7 @@ footer {
   }
 }
 /*  and (max-device-width: 320px) Почему-то не читает браузер, только инспектор*/
-@media screenand (max-width: 320px)  {
+@media (max-width: 320px)  {
 
   header,
   .paper,
