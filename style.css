@@ -604,8 +604,8 @@ footer {
   line-height: 1.71;
   color: #626f77;
 }
-
-@media screen and (max-device-width: 780px) {
+/* -device */
+@media screen and (max-width: 780px){
   .Checkout-Confirm-Cash {
     min-height: 1405px;
   }
@@ -687,8 +687,8 @@ footer {
     padding-top: 0px;
   }
 }
-
-@media screen and (max-device-width: 320px) {
+/*  and (max-device-width: 320px) Почему-то не читает браузер, только инспектор*/
+@media screenand (max-device-width: 320px)  {
 
   header,
   .paper,
