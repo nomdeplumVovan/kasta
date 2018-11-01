@@ -213,7 +213,7 @@ main {
 .confirmation .payment__card {
   padding-left: 34px;
 }
-
+.delivery__description.up__checkbox,
 .payment {
   padding-right: 34px;
 }
